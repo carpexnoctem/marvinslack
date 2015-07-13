@@ -8,6 +8,7 @@
     "cron": "^1.0.9",
     "hubot": "^2.13.2",
     "hubot-beer-me": "^0.1.1",
+    "hubot-business-cat": "^1.2.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.4",
     "hubot-google-translate": "^0.1.0",

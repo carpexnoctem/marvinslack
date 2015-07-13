@@ -1,5 +1,6 @@
 [
   "hubot-heroku-keepalive",
   "hubot-beer-me",
+  "hubot-business-cat",
   "hubot-redis-brain"
   ]
