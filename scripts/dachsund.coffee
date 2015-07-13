@@ -8,13 +8,13 @@
 #   None
 #
 # Commands:
-#   hubot weiner tug - Pull a random dog from /r/Dachsund
+#   hubot wiener tug - Pull a random dog from /r/Dachsund
 #
 # Author:
 #   domingusj
 
 module.exports = (robot) ->
-  robot.respond /high five( .+)*/i, (msg) ->
+  robot.respond /wiener tug( .+)*/i, (msg) ->
     reddit msg, msg.match[1]?.trim()
 
 reddit = (msg) ->
