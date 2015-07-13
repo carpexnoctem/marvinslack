@@ -1,22 +1,29 @@
 {
-  "name": "marvinslack",
+  "name": "triatomic",
   "version": "0.0.0",
   "private": true,
-  "author": "jchong <jchong011@gmail.com>",
+  "author": "Bob Bergman <rbergman@atlassian.com>",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
+    "cron": "^1.0.9",
     "hubot": "^2.13.2",
+    "hubot-beer-me": "^0.1.1",
     "hubot-diagnostics": "0.0.1",
-    "hubot-google-images": "^0.1.5",
-    "hubot-google-translate": "^0.2.0",
+    "hubot-google-images": "^0.1.4",
+    "hubot-google-translate": "^0.1.0",
     "hubot-help": "^0.1.1",
     "hubot-heroku-keepalive": "0.0.4",
+    "hubot-hipchat": "^2.12.0-2",
     "hubot-maps": "0.0.2",
     "hubot-pugme": "^0.1.0",
-    "hubot-redis-brain": "0.0.3",
-    "hubot-rules": "^0.1.1",
+    "hubot-redis-brain": "0.0.2",
+    "hubot-rules": "^0.1.0",
     "hubot-scripts": "^2.16.1",
-    "hubot-shipit": "^0.2.0"
+    "hubot-shipit": "^0.2.0",
+    "hubot-youtube": "^0.1.2",
+    "request": "^2.58.0",
+    "twit": "^2.1.0",
+    "underscore": "^1.8.3"
   },
   "engines": {
     "node": "0.10.x"
