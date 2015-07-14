@@ -20,7 +20,7 @@ module.exports = (robot) ->
                   "Jimmy Johns!",
                   "Burger King",
                   "Wendys",
-                  "BC Burrito"
+                  "BC Burrito",
                   "Five Guys"
                   ]
 
