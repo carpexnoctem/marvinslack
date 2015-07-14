@@ -24,5 +24,5 @@ module.exports = (robot) ->
                   "Five Guys"
                   ]
 
-  robot.respond /random user/i, (msg) ->
+  robot.respond /feed me/i, (msg) ->
     msg.send "Winner: " +  msg.random restaurants
