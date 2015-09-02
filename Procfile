@@ -1,1 +1,1 @@
-web: bin/hubot --adapter victorops --name marvinslack
+web: bin/hubot --adapter victorops
