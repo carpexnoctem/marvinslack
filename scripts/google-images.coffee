@@ -43,7 +43,7 @@ imageMe = (msg, query, animated, faces, cb) ->
     q =
       q: query,
       searchType:'image',
-      safe:'high',
+      safe:'off',
       fields:'items(link)',
       cx: googleCseId,
       key: googleApiKey
@@ -76,7 +76,7 @@ imageMe = (msg, query, animated, faces, cb) ->
           ) error for error in response.error.errors if response.error?.errors
   else
     # Using deprecated Google image search API
-    q = v: '1.0', rsz: '8', q: query, safe: 'active'
+    q = v: '1.0', rsz: '8', q: query, safe: 'off'
     q.imgtype = 'animated' if typeof animated is 'boolean' and animated is true
     q.imgtype = 'face' if typeof faces is 'boolean' and faces is true
     msg.http('https://ajax.googleapis.com/ajax/services/search/images')
