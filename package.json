@@ -9,6 +9,7 @@
     "hubot": "^2.13.2",
     "hubot-beer-me": "^0.1.1",
     "hubot-business-cat": "^1.2.2",
+    "hubot-codinglove": "^0.2.6",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.4",
     "hubot-google-translate": "^0.1.0",
@@ -25,11 +26,8 @@
     "hubot-victorops": ">=0.0.2",
     "hubot-youtube": "^0.1.2",
     "request": "^2.58.0",
-    "sax": "^1.1.3",
     "twit": "^2.1.0",
-    "underscore": "^1.8.3",
-    "xml2js": "^0.4.13",
-    "xmlbuilder": "^3.1.0"
+    "underscore": "^1.8.3"
   },
   "engines": {
     "node": "0.10.x"
