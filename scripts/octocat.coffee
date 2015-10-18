@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot octocat
+#   hubot octocat - A random message from octocats
 #
 # Author:
-#   domingusj
+#   artfuldodger, domingusj
 
 module.exports = (robot) ->
   robot.respond /octocat/i, (msg) ->
@@ -19,7 +19,7 @@ module.exports = (robot) ->
 
 octocat = (msg) ->
   msg
-    .http('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://feeds.feedburner.com/Octocats')
+    .http('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://feeds.feedburner.com/fmylife')
       .get() (err, res, body) ->
         octocats = JSON.parse(body)
         random = Math.floor(Math.random() * octocats.responseData.feed.entries.length)
