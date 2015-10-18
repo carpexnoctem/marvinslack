@@ -1,32 +1,28 @@
 # Description:
-#   Show random octocat
+#   None
 #
 # Dependencies:
-#   "xml2js": "0.1.14"
+#   None
 #
 # Configuration:
 #   None
 #
 # Commands:
-#   hubot octocat me - a randomly selected octocat
-#   hubot octocat bomb me <number> - octocat-splosion!
+#   hubot octocat
 #
 # Author:
-#   joshuaflanagan
-
-xml2js = require('xml2js')
+#   domingusj
 
 module.exports = (robot) ->
-  robot.respond /octocat\s*(?:me)?$/i, (msg) ->
-    show_octocats msg, 1
-  robot.respond /octocat\s+(?:bomb)\s*(?:me)?\s*(\d+)?/i, (msg) ->
-    count = msg.match[1] || 5
-    show_octocats msg, count
-show_octocats = (msg, count) ->
-  msg.http('http://feeds.feedburner.com/Octocats')
-    .query(format: 'xml')
-    .get() (err, res, body) ->
-      parser = new xml2js.Parser()
-      parser.parseString body, (err, result) ->
-        octocats = (r["content"]["div"]["a"]["img"]["@"]["src"] for r in result["entry"])
-        msg.send msg.random octocats for i in [1..count]
+  robot.respond /octocat/i, (msg) ->
+    octocat msg
+
+octocat = (msg) ->
+  msg
+    .http('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&q=http://feeds.feedburner.com/Octocats')
+      .get() (err, res, body) ->
+        octocats = JSON.parse(body)
+        random = Math.floor(Math.random() * octocats.responseData.feed.entries.length)
+        text = octocats.responseData.feed.entries[random].content
+        text = text[0..text.indexOf('<img')-1]
+        msg.send text
