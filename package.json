@@ -22,11 +22,11 @@
     "hubot-scripts": "^2.16.1",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
+    "hubot-victorops": ">=0.0.2",
     "hubot-youtube": "^0.1.2",
     "request": "^2.58.0",
     "twit": "^2.1.0",
     "underscore": "^1.8.3",
-    "hubot-victorops": ">=0.0.2",
     "xml2js": "^0.4.13"
   },
   "engines": {
