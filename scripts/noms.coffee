@@ -21,8 +21,10 @@ module.exports = (robot) ->
                   "Burger King",
                   "Wendys",
                   "BC Burrito",
-                  "Five Guys"
+                  "Five Guys",
+                  "Whole Foods",
+                  "Native Foods"
                   ]
 
-  robot.respond /feed me/i, (msg) ->
+  robot.respond /random user/i, (msg) ->
     msg.send "Winner: " +  msg.random restaurants
